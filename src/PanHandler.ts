@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Animated, PanResponderGestureState, Easing } from "react-native";
 
 export interface AutoAnimateOptions {

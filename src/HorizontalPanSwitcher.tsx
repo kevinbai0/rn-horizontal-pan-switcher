@@ -49,7 +49,6 @@ export default class HorizontalPanSwitcher extends React.Component<IHorizontalPa
       })
     }
   }
-
   static getDerivedStateFromProps(props: IHorizontalPanSwitcherProps, state: IHorizontalPanSwitcherState) {
     if (HorizontalPanSwitcher.diffs(props,state)) {
       (props.panHooks || state.panHooks).reinit((props.panHooks || state.panHooks).panHandler.horizontalPanSwitcherShouldBeFirstResponder, (props.panHooks || state.panHooks).panSwitcher.itemPressed, (props.panHooks || state.panHooks).panSwitcher.indexChanged, state.itemWidths)

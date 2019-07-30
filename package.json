@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "description": "React native component with horizontal pan scrolling",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "Kevin Bai",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-native": "0.59.8"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-native": "^0.60.2",
+    "rollup": "^1.17.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  }
 }
