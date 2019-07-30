@@ -29,7 +29,6 @@ export default class PanHandler {
             const direction: "next" | "back" = gesture.dx > 0 ? "back" : "next";
             if (currentIndex === 0 && direction === "back") canSwipe = false;
             if (currentIndex === itemWidths.length - 1 && direction === "next") canSwipe = false;
-            console.log(`${direction} ${canSwipe} ${currentIndex}/${itemWidths.length} `);
 
             this.panValue.setValue(-this.totalPanWidth(currentIndex, itemWidths, staggerFirst) + gesture.dx * (canSwipe ? 1 : 0.4));
         }

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { TouchableWithoutFeedback, Animated, View, LayoutChangeEvent } from "react-native";
+import { TouchableWithoutFeedback, Animated, LayoutChangeEvent } from "react-native";
 
 export interface IHorizontalPanItemProps {
     onPress?(index: number): void

@@ -1,14 +1,13 @@
 
 import React from "react";
 import { View } from "react-native";
-import styled from "styled-components/native";
 import HorizontalPanItem from "./HorizontalPanItem";
 import { AutoAnimateOptions } from "./PanHandler";
 import PanHooks from "./PanHooks";
 
 export interface IHorizontalPanSwitcherProps {
   items: Array<JSX.Element>
-  style?: string
+  style?: object
   itemStyle?: object
   currentIndex?: number
   children?: any
@@ -24,12 +23,6 @@ export interface IHorizontalPanSwitcherState {
   staggerFirst?: number
   shouldUpdate: boolean
 }
-
-const Container = styled.View<{customStyle?: string}>`
-  display: flex;
-  flex-direction: row;
-  ${props => props.customStyle && props.customStyle};
-`;
 
 export default class HorizontalPanSwitcher extends React.Component<IHorizontalPanSwitcherProps, IHorizontalPanSwitcherState> {
   itemWidths: number[] = []
@@ -88,7 +81,7 @@ export default class HorizontalPanSwitcher extends React.Component<IHorizontalPa
   
   render() {
     return (
-      <Container {...this.state.panHooks.panResponder.panHandlers} customStyle={this.props.style}>
+      <View {...this.state.panHooks.panResponder.panHandlers} style={{display: "flex", flexDirection: "row", ...this.props.style}}>
           <View style={{position: "absolute", width: "100%", height: "100%"}}>
             {this.props.children}
           </View>
@@ -107,7 +100,7 @@ export default class HorizontalPanSwitcher extends React.Component<IHorizontalPa
               </HorizontalPanItem>
             )
           }
-      </Container>
+      </View>
     )
   }
 }
