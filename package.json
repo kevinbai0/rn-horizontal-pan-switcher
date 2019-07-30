@@ -1,0 +1,11 @@
+{
+  "name": "rn-horizontal-pan-switcher",
+  "version": "1.0.0",
+  "description": "React native component with horizontal pan scrolling",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kevin Bai",
+  "license": "ISC"
+}
